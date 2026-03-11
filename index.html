@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Issue Tracker - Home</title>
+  <title>Issue Tracker - Login</title>
   <link rel="stylesheet" href="style.css">
 
   <!-- DaisyUI -->
@@ -15,84 +15,38 @@
 
 </head>
 <body class="bg-base-200 min-h-screen">
-       <header class="flex items-center bg-base-200 py-3 px-3 justify-between shadow-md" >
-    
-       <!-- left side of Nav -->
-        <div class="flex">
-        <p><i class="fa-brands fa-github text-3xl"></i></p>
-        <h2>GitHub Issues Tracker</h2>
-        </div>
+
+   <section class="login pt-10">
+    <fieldset class=" bg-white fieldset border-base-300 rounded-box w-xs border p-4 shadow-lg justify-center mx-auto my-5">
+      <p class="justify-center mx-auto"><i class="fa-brands fa-github text-4xl"></i></p>
+      <h2 class="text-xl font-bold">GitHub Issues Tracker</h2>
+      <p>Sign in to manage your issues</p>
+  
+  <input id="input-username"  type="User Name" class="input" placeholder="User Name" />
+  <p class="text-purple-600 pb-5">Default: admin</p>
 
 
-        <!-- right side of Nav -->
-        <div class="flex">
-          <!-- searchbox -->
-          <label class="input">
-              <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <g
-                  stroke-linejoin="round"
-                  stroke-linecap="round"
-                  stroke-width="2.5"
-                  fill="none"
-                  stroke="currentColor"
-                >
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <path d="m21 21-4.3-4.3"></path>
-                </g>
-              </svg>
-              <input type="search" required placeholder="Search" />
-          </label>
-
-          <!-- + new issue button -->
-              <button class="btn mx-2  bg-purple-800 text-white">+ New Issue</button>
-        </div>
-      </header>
-      <div class="summary">
-        <!-- Mid part -->
-      <section class="flex bg-white my-10 space-x-2 pl-9 w-11/12 mx-auto shadow-md rounded-xl">
-                <button class="btn w-[120px] my-5 mx-1">All</button>
-               <button id="open-btn" class="btn  w-[120px] my-5 mx-1 ">Open</button>
-               <button id="closed-btn" class="btn  w-[120px] my-5 mx-1">Closed</button>
-      
-      </section>
-        <!-- Details headline part -->
-      <div class="flex justify-between bg-white w-11/12 mx-auto space-x-2 pl-9 shadow-xl rounded-t-md">
-        
-        <!-- left side -->
-         <div class="flex py-[24px]">
-        <p><i class="fa-regular fa-circle-dot text-2xl py-3"></i></p>
-        <div class="pl-2">
-          <h1 class=""><span>$50 </span>Issues</h1>
-          <p class="opacity-40">Track and manage your project issues</p>
-        </div>
-        </div>
-        <!-- right side -->
-        <div class="flex items-center space-x-4 pr-5">
-          <p><span><i class="fa-solid fa-circle text-xs text-green-600"></i></span> Open</p>
-          <p><span><i class="fa-solid fa-circle text-xs text-purple-800"></i> Closed</span></p>
-        </div>
-
-      </div>
-
-      </div>
+  <input id="input-password" type="password" class="input" placeholder="Password" />
+  <p class="text-purple-600 pb-5">Default: admin123</p>
 
 
-      <!-- issue container all -->
-      <div 
-      id="issue-container" class=" flex grid grid-cols-4 border bg-slate-100 w-11/12 justify-center mx-auto border-white py-4 px-2 rounded-b-md shadow-2xl ">        
-      </div>
+ <button id="signin-btn" class=" bg-purple-800 btn btn-primary mt-4">Sign In</button>
 
-      <div
-        id="open-issue-container" class=" flex grid grid-cols-4 border bg-slate-100 w-11/12 justify-center mx-auto border-white py-4 px-2 rounded-b-md shadow-2xl ">        
-      </div>
+  <div class="flex items-center my-4">
+    <hr class="flex-grow border-gray-300">
+    <span class="mx-4 text-gray-500">OR</span>
+    <hr class="flex-grow border-gray-300">
+</div>
 
-         <div
-        id="closed-issue-container" class=" flex grid grid-cols-4 border bg-slate-100 w-11/12 justify-center mx-auto border-white py-4 px-2 rounded-b-md shadow-2xl ">        
-      </div>
+<p class="flex items-center mx-auto font-sm opacity-40">Demo Credentials:</p>
+<p><span class="font-bold">Username:</span> admin <br>
+<p><span class="font-bold">Password:</span> admin123 <br>
 
-      
-      
+</fieldset>
+
+ </section>
 
   <script src="./script/script.js"></script>
+  <script src="./script/login.js"></script>
 </body>
 </html>
